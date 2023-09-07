@@ -142,3 +142,4 @@ setTimeout(callback, 1000); // Call function callback after given time(in ms)
 </html>
 ```
 - This function will timeout immedietely (at 0 ms) cuz the function is called instead of the function object. (``onTimeout()`` is calling the function while ``onTimeout`` references the object).
+---
