@@ -5,6 +5,8 @@ tags:
   - SI379
   - javascript
   - python
+  - css
+  - html
 ---
 # JavaScript Practice and Deploying Pages
 ## JavaScript Booleans
