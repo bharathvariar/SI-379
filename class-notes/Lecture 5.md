@@ -3,8 +3,8 @@ Date: 2023-09-12
 tags:
   - UMich
   - SI379
-  - html
   - EventListeners
+  - javascript
 ---
 # Practice with Event Listeners
 ## Recap
@@ -52,7 +52,7 @@ Each of these pieces of code is supposed to change the ``<p>`` element after 5 s
 	const onTimeout = () => {
 		p.innerText ='New Text';
 	};
-	setTimeout(onTimeout(), 5000); 
+	setTimeout(onTimeout, 5000); 
 </script>
 ```
 ## Manipulating DOM Elements
