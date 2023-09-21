@@ -112,45 +112,45 @@ person["age"]++; // change value
     - The DOM is manipulated using HTML and JavaScript.
     - `document.querySelector()` is the JavaScript object used to access the DOM elements.
 3. What is the output of the following code:
-    ```javascript
-    function func_A() { console.log("A"); }
-    function func_B() { console.log("B"); }
-    function func_C() { console.log("C"); }
-    function func_D() { console.log("D"); }
-    function func_E() { console.log("E"); }
-    setTimeout(func_A, 1000);
-    setTimeout(func_B, 0);
-    func_C();
-    setTimeout(func_D, 1000);
-    ```
-    - The output will be:
-        C
-        B
-        A
-        D
-    - `func_C()` is the first to run cuz it is called immedietely.
-    - `setTimeout(fun, 0)` -> Even though the timer set off immedietely, it will wait for everything in the run-queue to finish before adding the callback function to the run-queue.
-    - Timer for all functions are added and started together in JavaScript. And it is added after the entire script has been run.
-    - Queue: sT(A), sT(B), C, sT(D), B, A, D
-4. Why does the following code produce the error "`Uncaught TypeError: can't access property "addEventListener", btn is null`" ?
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <script>
-            const btn = document.getElementById("my-button");
-            btn.addEventListener("click", () => {
-            alert('You clicked the button!');
-            });
-        </script>
-    </head>
-    <body>
-        <button id="my-button">Click me!</button>
-    </body>
-    </html>
-    ```
-    - The Script looks for the element before it has been created since it runs first. So `getElementById` returns a `null` object for `btn`;
-5. What is the difference between a "class" in HTML and an "id"? Where should you use them? How do you select the elements with a specific class in CSS? How do you select the elements with a specific class in JavaScript? How do you select the elements with a specific id in CSS? How do you select the elements with a specific id in JavaScript?
+```javascript
+function func_A() { console.log("A"); }
+function func_B() { console.log("B"); }
+function func_C() { console.log("C"); }
+function func_D() { console.log("D"); }
+function func_E() { console.log("E"); }
+setTimeout(func_A, 1000);
+setTimeout(func_B, 0);
+func_C();
+setTimeout(func_D, 1000);
+```
+- The output will be:
+	C
+	B
+	A
+	D
+- `func_C()` is the first to run cuz it is called immedietely.
+- `setTimeout(fun, 0)` -> Even though the timer set off immedietely, it will wait for everything in the run-queue to finish before adding the callback function to the run-queue.
+- Timer for all functions are added and started together in JavaScript. And it is added after the entire script has been run.
+- Queue: sT(A), sT(B), C, sT(D), B, A, D
+1. Why does the following code produce the error "`Uncaught TypeError: can't access property "addEventListener", btn is null`" ?
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		const btn = document.getElementById("my-button");
+		btn.addEventListener("click", () => {
+		alert('You clicked the button!');
+		});
+	</script>
+</head>
+<body>
+	<button id="my-button">Click me!</button>
+</body>
+</html>
+```
+- The Script looks for the element before it has been created since it runs first. So `getElementById` returns a `null` object for `btn`;
+1. What is the difference between a "class" in HTML and an "id"? Where should you use them? How do you select the elements with a specific class in CSS? How do you select the elements with a specific class in JavaScript? How do you select the elements with a specific id in CSS? How do you select the elements with a specific id in JavaScript?
     - ID is supposed to be specific, but classes are meant to be a broader set of elements.
     - Selecting class in `CSS`: `.<class-name>`
     - Selecting class in `JavaScript`: `document.querySelector('.<class-name>')`
