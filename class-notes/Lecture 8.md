@@ -103,15 +103,15 @@ person.isStudent = false; // change value
 person["age"]++; // change value
 ```
 ## Random Questions
-1. Difference between `let`, `var` and `const`:
-    - `let` allows variables to be reassigned and mutated.
-    - `var` is like `let` but is function-scoped.
-    - `const` creates variables that *cannot* be reassinged but *can* be mutated.
-2. What is the DOM and how can it be manipulated:
-    - The DOM is the tree of objects that are rendered on webpages.
-    - The DOM is manipulated using HTML and JavaScript.
-    - `document.querySelector()` is the JavaScript object used to access the DOM elements.
-3. What is the output of the following code:
+### 1. Difference between `let`, `var` and `const`:
+- `let` allows variables to be reassigned and mutated.
+- `var` is like `let` but is function-scoped.
+- `const` creates variables that *cannot* be reassinged but *can* be mutated.
+### 2. What is the DOM and how can it be manipulated:
+- The DOM is the tree of objects that are rendered on webpages.
+- The DOM is manipulated using HTML and JavaScript.
+- `document.querySelector()` is the JavaScript object used to access the DOM elements.
+### 3. What is the output of the following code:
 ```javascript
 function func_A() { console.log("A"); }
 function func_B() { console.log("B"); }
@@ -132,7 +132,7 @@ setTimeout(func_D, 1000);
 - `setTimeout(fun, 0)` -> Even though the timer set off immedietely, it will wait for everything in the run-queue to finish before adding the callback function to the run-queue.
 - Timer for all functions are added and started together in JavaScript. And it is added after the entire script has been run.
 - Queue: sT(A), sT(B), C, sT(D), B, A, D
-1. Why does the following code produce the error "`Uncaught TypeError: can't access property "addEventListener", btn is null`" ?
+### 4. Why does the following code produce the error "`Uncaught TypeError: can't access property "addEventListener", btn is null`" ?
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -149,11 +149,11 @@ setTimeout(func_D, 1000);
 </body>
 </html>
 ```
-- The Script looks for the element before it has been created since it runs first. So `getElementById` returns a `null` object for `btn`;
-1. What is the difference between a "class" in HTML and an "id"? Where should you use them? How do you select the elements with a specific class in CSS? How do you select the elements with a specific class in JavaScript? How do you select the elements with a specific id in CSS? How do you select the elements with a specific id in JavaScript?
-    - ID is supposed to be specific, but classes are meant to be a broader set of elements.
-    - Selecting class in `CSS`: `.<class-name>`
-    - Selecting class in `JavaScript`: `document.querySelector('.<class-name>')`
-    - Selecting id in `CSS`: `#<id-name>`
-    - Selecting id in `JavaScript`: `document.querySelector('#<id-name>')`
+- The Script looks for the element before it has been created since it runs first. So `getElementById` returns a `null` object for `btn`.
+### 5. What is the difference between a "class" in HTML and an "id"? Where should you use them? How do you select the elements with a specific class in CSS? How do you select the elements with a specific class in JavaScript? How do you select the elements with a specific id in CSS? How do you select the elements with a specific id in JavaScript?
+- ID is supposed to be specific, but classes are meant to be a broader set of elements.
+- Selecting class in `CSS`: `.<class-name>`
+- Selecting class in `JavaScript`: `document.querySelector('.<class-name>')`
+- Selecting id in `CSS`: `#<id-name>`
+- Selecting id in `JavaScript`: `document.querySelector('#<id-name>')`
 ---
