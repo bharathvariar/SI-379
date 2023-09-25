@@ -15,7 +15,7 @@ input#guess-inp { /* The guess input box */
 
 #info-message { /* The info message (e.g., when the user enters an invalid word */
     color: grey;
-    text-align: center;
+    text-align: center; 
 }
 #info-message.hidden { display: none; } /* When hidden, don't take up space */
 

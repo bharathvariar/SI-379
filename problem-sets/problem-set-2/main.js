@@ -11,7 +11,6 @@ showInfoMessage('Loading...');
 // Get a random answer from the list
 getRandomAnswer((answer) => {
     correctAnswer = answer;              // Once we have it, store it, ...
-    console.log(correctAnswer);
     inputEl.removeAttribute('disabled'); // enable the input field, ...
     clearInfoMessage();                  // clear the loading message, and...
     inputEl.focus();                     // and focus the input field
@@ -46,10 +45,12 @@ getRandomAnswer((answer) => {
 //      2.e. Append the <span> element to the guess's <div> element
 // 3. Append the guess's <div> element to the existing <div> with ID 'guesses'
 // 4. Try it out by calling displayGuessFeedback('hello') and displayGuessFeedback('world')
-function displayGuessFeedback(guess) { 
+function displayGuessFeedback(guess) {
     const word = document.createElement('div');
+    word.classList.add('guess');
     for (let i = 0; i < guess.length; i++) {
         const letterElement = document.createElement('span');
+        letterElement.classList.add('letter');
         const letter = guess[i].toUpperCase();
         let correctLetter = correctAnswer[i];
         if (correctLetter) {
@@ -81,21 +82,20 @@ function displayGuessFeedback(guess) {
 //              1.d.ii.A If the guess is a valid word, display feedback for the guess (using the displayGuessFeedback function from Step 1)
 //              1.d.ii.B If the guess is not a valid word, show an error message: "{guess} is not a valid word." (where {guess} is the value of the guess)
 // 2. When the user presses key other than 'Enter', clear the info message (using the clearInfoMessage function)
-console.log("Script is running.");
 inputEl.addEventListener('keydown', (event) => {
-    console.log(event.key);
     if (event.key === 'Enter') {
         const guess = inputEl.value.trim();
         if (guess.length !== WORD_LENGTH) {
             showInfoMessage(`Your guess must be ${WORD_LENGTH} letters long.`);
-        } else if (guess.toUpperCase() === correctAnswer.toUpperCase()) {
-            showInfoMessage(`You win! The answer was "${correctAnswer}".`);
-            inputEl.setAttribute('disabled', true);
         } else {
             inputEl.value = '';
             isValidWord(guess, (isValid) => {
                 if (isValid) {
                     displayGuessFeedback(guess);
+                    if (guess.toUpperCase() === correctAnswer.toUpperCase()) {
+                        showInfoMessage(`You win! The answer was "${correctAnswer}".`);
+                        inputEl.setAttribute('disabled', true);
+                    }
                 } else {
                     showInfoMessage(`"${guess}" is not a valid word.`);
                 }
