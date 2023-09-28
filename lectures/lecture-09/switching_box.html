@@ -22,9 +22,11 @@
 <body>
     <div id="box"></div>
     <script>
-        let timerID = null;
+        let timerID = false;
         const box = document.querySelector("#box");
-        const toggleColor = () => {
+        
+        const toggleColor = () => {   
+            
             if (box.classList.contains("red")) {
                 box.classList.remove("red");
                 box.classList.add("blue");
@@ -32,12 +34,25 @@
                 box.classList.remove("blue");
                 box.classList.add("red");
             }
+            
             if (timerID) {
-                clearTimeout(timerID);
+                // Clearing timerID before setting timeout cuz we wanna 
+                // clear it from last time before setting it again
+                clearTimeout(timerID); 
             }
-            timerID = setTimeout(toggleColor, 1000);
+
+            timerID = setTimeout(() => {
+                toggleColor();
+                console.log("Toggle cuz of timer")
+            }, 1000);
         };
-        box.addEventListener("click", toggleColor)
+
+        box.addEventListener("click", () => {
+            toggleColor();
+            console.log("Toggle cuz of click")
+        });
+        //  To initialise since when the box is created, 
+        //  the box has no class and to set the first timeout
         toggleColor();
     </script>
 </body>
