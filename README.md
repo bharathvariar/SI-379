@@ -15,18 +15,6 @@ To access the problem sets and class notes, use the provided links above. You ca
 git clone https://github.com/bharathvariar/SI-379.git
 ```
 
-## Class Notes
-
-- [Lecture 03](./class-notes/Lecture%2003.md)
-- [Lecture 04](./class-notes/Lecture%2004.md)
-- [Lecture 05](./class-notes/Lecture%2005.md)
-- [Lecture 06](./class-notes/Lecture%2006.md)
-- [Lecture 07](./class-notes/Lecture%2007.md)
-- [Lecture 08](./class-notes/Lecture%2008.md)
-- [Lecture 09](./class-notes/Lecture%2009.md)
-- [Lecture 10](./class-notes/Lecture%2010.md)
-- [Lecture 11](./class-notes/Lecture%2011.md)
-
 ## Problem Sets
 
 - [Problem Set 1](./problem-sets/problem-set-1/index.html)
