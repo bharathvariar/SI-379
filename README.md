@@ -17,10 +17,10 @@ git clone https://github.com/bharathvariar/SI-379.git
 
 ## Lecture Practice
 
-- [To-Do List](./lecture-practice/lecture-05-event-listener/index.html)
+- [`'click'` Event Listener](./lecture-practice/lecture-05-event-listener/index.html)
 - [Basic Arithmetic](./lecture-practice/lecture-06-basic-arithmetic/index.html)
 - [To Do List](./lecture-practice/lecture-07-todo-List/index.html)
-- [Timers with JavaScript](./lecture-practice/lecture-09-switching-box-timers/index.html)
+- [`setTimeout()` and `clearTimeout()`](./lecture-practice/lecture-09-switching-box-timers/index.html)
 - [Custom Button](./lecture-practice/lecture-10-custom-button/index.html)
 
 ## Problem Sets
