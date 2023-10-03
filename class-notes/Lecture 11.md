@@ -176,3 +176,4 @@ function runAnimation(duration, fromX, toX) {
 }
 ```
 - [More Easing functions](https://easings.net/)
+---

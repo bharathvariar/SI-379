@@ -1,20 +1,13 @@
 let score = 0;
 
 for (const id of getAllHoleIds()) {
-    // Write code that adds a "click" listener to the element with this id
-    //     When the user clicks on it, *if* the element has class "needs-whack" then:
-    //          1. Remove the "needs-whack" class
-    //          2. Add the "animating-whack" class *for 500 milliseconds*
-    //          3. Increment the score by 1 (and update the score display)
-    //          4. If the score is 45 or higher, stop the game (by clearing the interval)
     let tile = document.getElementById(id);
     tile.addEventListener('click', () => {
         if (tile.classList.contains('needs-whack')) {
             tile.classList.remove('needs-whack');
             tile.classList.add('animating-whack');
             setTimeout(() => { tile.classList.remove('animating-whack') }, 500);
-
-            score += 1;
+            score++;
             document.querySelector('#score').textContent = `Score: ${score}`; // Update the score display
             if (score >= 45) {
                 clearInterval(interval); // Stop the game
@@ -23,11 +16,11 @@ for (const id of getAllHoleIds()) {
     });
 }
 
-// Write code that *every second*, picks a random unwhacked hole (use getRandomUnwhackedHoleId)
-// and adds the "needs-whack" class
 const interval = setInterval(() => {
-    tile = document.getElementById(getRandomUnwhackedHoleId());
-    tile.classList.add('needs-whack');
+    if(getRandomUnwhackedHoleId) {
+        tile = document.getElementById(getRandomUnwhackedHoleId());
+        tile.classList.add('needs-whack');
+    }
 }, 1000);
 
 /**

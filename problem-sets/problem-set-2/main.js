@@ -1,4 +1,4 @@
-const WORD_LENGTH = 5; // How long each guess should be
+.const WORD_LENGTH = 5; // How long each guess should be
 const inputEl = document.querySelector('#guess-inp'); // The input DOM element
 
 // Will store the correct answer once fetched
